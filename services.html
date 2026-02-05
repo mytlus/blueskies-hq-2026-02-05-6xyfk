@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blueskies HQ Services - Discover our premium sportsbar and restaurant offerings. Live sports, fine dining, event hosting, and more.">
+    <meta name="keywords" content="sportsbar services, restaurant, live sports, dining, events, catering">
+    <meta name="author" content="Blueskies HQ">
+    <title>Our Services - Blueskies HQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #5B4BFF 0%, #8B7FFF 100%);
+        }
+
+        .gradient-soft-bg {
+            background: linear-gradient(135deg, #EEF0FF 0%, #F5F7FF 100%);
+        }
+
+        .accent-mint {
+            color: #00E5A8;
+        }
+
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            transition: all 300ms ease-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #4A3AEE;
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(91, 75, 255, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .card-hover {
+            transition: all 300ms ease-out;
+        }
+
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(91, 75, 255, 0.1) 0%, rgba(0, 229, 168, 0.05) 100%);
+        }
+
+        .section-heading {
+            color: #5B4BFF;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subheading {
+            color: #1F2937;
+            font-weight: 500;
+        }
+
+        .text-muted {
+            color: #6B7280;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 600ms ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-4 flex items-center justify-between">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+                    <div class="w-10 h-10 rounded-full gradient-primary flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">B</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">Blueskies HQ</span>
+                </a>
+
+                <!-- Back Button -->
+                <a href="index.html" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300 flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 px-8 md:px-16 overflow-hidden">
+        <div class="absolute inset-0 hero-gradient -z-10"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#5B4BFF] to-[#00E5A8] rounded-full blur-3xl opacity-10 -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[#00E5A8] to-[#5B4BFF] rounded-full blur-3xl opacity-10 -z-10"></div>
+
+        <div class="max-w-7xl mx-auto text-center animate-fade-in-up">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+                Our Services
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                Discover the complete range of premium experiences we offer at Blueskies HQ. From live sports entertainment to culinary excellence, we have everything you need for an unforgettable visit.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    What We Offer
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Experience excellence across every aspect of your visit to Blueskies HQ.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Service 1: Live Sports Broadcasting -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <i class="fas fa-tv text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Live Sports Broadcasting</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Experience every thrilling moment of your favorite games on our state-of-the-art HD display screens. We broadcast all major sporting events including football, basketball, soccer, baseball, and more with crystal-clear picture quality and immersive surround sound.
+                    </p>
+                </div>
+
+                <!-- Service 2: Premium Dining Experience -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Dining Experience</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Indulge in culinary excellence crafted by our award-winning chefs. Our diverse menu features gourmet burgers, fresh seafood, tender steaks, innovative vegetarian options, and delectable appetizers. Every dish is prepared with premium ingredients and meticulous attention to detail.
+                    </p>
+                </div>
+
+                <!-- Service 3: Full-Service Bar -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <i class="fas fa-wine-glass text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Full-Service Bar</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Enjoy expertly crafted cocktails, premium spirits, and an extensive selection of beers and wines. Our skilled bartenders create signature drinks and classic favorites to complement your meal and enhance your sports-watching experience.
+                    </p>
+                </div>
+
+                <!-- Service 4: Private Event Hosting -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Private Event Hosting</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Host your corporate events, birthday celebrations, or special occasions in our versatile private spaces. We offer customizable packages, dedicated staff, and the perfect ambiance for memorable gatherings with friends, family, or colleagues.
+                    </p>
+                </div>
+
+                <!-- Service 5: Sports Viewing Packages -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <i class="fas fa-ticket-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Sports Viewing Packages</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Choose from our exclusive viewing packages designed for ultimate sports fan experiences. Enjoy premium seating, complimentary appetizers, and reserved tables for major sporting events throughout the year.
+                    </p>
+                </div>
+
+                <!-- Service 6: Catering Services -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <i class="fas fa-concierge-bell text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Catering Services</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Bring the Blueskies HQ experience to your location. Our professional catering team delivers premium food and beverage service for corporate functions, celebrations, and special events of any size.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 gradient-soft-bg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                Ready to Experience Blueskies HQ?
+            </h2>
+            <p class="text-xl text-gray-700 mb-10 leading-relaxed">
+                Contact us today to learn more about our services, make a reservation, or discuss your event requirements. Our team is ready to help you plan an unforgettable experience.
+            </p>
+            <a href="contact.html" class="btn-primary rounded-full px-10 py-4 font-semibold inline-block">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 md:py-20 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full gradient-primary flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">B</span>
+                        </div>
+                        <span class="text-xl font-bold">Blueskies HQ</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        ST Mary Premier Sportsbar & Restaurant. Where sports, dining, and unforgettable moments come together.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Menu</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">Live Sports</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">Premium Dining</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">Private Events</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">Catering</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400">
+                            <i class="fas fa-map-marker-alt text-[#00E5A8] mr-2"></i>
+                            ST Mary, Location
+                        </li>
+                        <li class="text-gray-400">
+                            <i class="fas fa-phone text-[#00E5A8] mr-2"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="text-gray-400">
+                            <i class="fas fa-envelope text-[#00E5A8] mr-2"></i>
+                            info@blueskieshq.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p class="text-gray-400 text-center md:text-left">
+                        &copy; 2024 Blueskies HQ. All rights reserved.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
