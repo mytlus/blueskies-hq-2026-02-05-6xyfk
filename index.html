@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blueskies HQ - ST Mary Premier Sportsbar & Restaurant. Watch live sports, enjoy premium dining, and experience a vibrant atmosphere like nowhere else.">
+    <meta name="keywords" content="sportsbar, restaurant, live sports, dining, atmosphere">
+    <meta name="author" content="Blueskies HQ">
+    <title>Blueskies HQ - ST Mary Premier Sportsbar & Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #5B4BFF 0%, #8B7FFF 100%);
+        }
+
+        .gradient-soft-bg {
+            background: linear-gradient(135deg, #EEF0FF 0%, #F5F7FF 100%);
+        }
+
+        .accent-mint {
+            color: #00E5A8;
+        }
+
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            transition: all 300ms ease-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #4A3AEE;
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(91, 75, 255, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .card-hover {
+            transition: all 300ms ease-out;
+        }
+
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(91, 75, 255, 0.1) 0%, rgba(0, 229, 168, 0.05) 100%);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms ease-out;
+        }
+
+        .faq-answer:not(.hidden) {
+            max-height: 500px;
+        }
+
+        .faq-icon {
+            transition: transform 300ms ease-out;
+        }
+
+        .testimonial-card {
+            transition: all 300ms ease-out;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 25px 50px rgba(91, 75, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .section-heading {
+            color: #5B4BFF;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subheading {
+            color: #1F2937;
+            font-weight: 500;
+        }
+
+        .text-muted {
+            color: #6B7280;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 600ms ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full gradient-primary flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">B</span>
+                </div>
+                <span class="text-xl font-bold text-gray-900">Blueskies HQ</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300">Features</a>
+                <a href="#benefits" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300">Testimonials</a>
+                <a href="#faq" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300">FAQ</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-gray-700 text-xl hover:text-[#5B4BFF] transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-8 py-4 flex flex-col gap-4">
+                <a href="#features" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300 py-2">Features</a>
+                <a href="#benefits" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300 py-2">Benefits</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300 py-2">Testimonials</a>
+                <a href="#faq" class="text-gray-700 font-medium hover:text-[#5B4BFF] transition-colors duration-300 py-2">FAQ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-32 md:py-40 px-8 md:px-16 overflow-hidden">
+        <div class="absolute inset-0 hero-gradient -z-10"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#5B4BFF] to-[#00E5A8] rounded-full blur-3xl opacity-10 -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[#00E5A8] to-[#5B4BFF] rounded-full blur-3xl opacity-10 -z-10"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Hero Content -->
+                <div class="animate-fade-in-up">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+                        Blueskies HQ
+                    </h1>
+                    <h2 class="text-3xl md:text-4xl font-bold gradient-primary bg-clip-text text-transparent mb-6">
+                        ST Mary Premier Sportsbar & Restaurant
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                        Experience the ultimate destination for sports enthusiasts and food lovers alike. Immerse yourself in an electrifying atmosphere where every game becomes unforgettable, every meal is a culinary masterpiece, and every moment is filled with energy and excitement.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://gmail.com" class="btn-primary rounded-full px-8 py-4 font-semibold text-center inline-block">
+                            Get in Touch
+                        </a>
+                        <a href="#features" class="border-2 border-[#5B4BFF] text-[#5B4BFF] rounded-full px-8 py-4 font-semibold hover:bg-[#EEF0FF] transition-colors duration-300 text-center inline-block">
+                            Explore More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Illustration -->
+                <div class="hidden lg:flex items-center justify-center">
+                    <div class="relative w-full h-96">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#5B4BFF] to-[#00E5A8] rounded-3xl opacity-20 blur-2xl"></div>
+                        <div class="relative bg-gradient-soft-bg rounded-3xl p-12 flex items-center justify-center h-full">
+                            <div class="text-center">
+                                <div class="text-7xl mb-4">🍽️</div>
+                                <p class="text-2xl font-bold text-gray-900 mb-2">Premium Experience</p>
+                                <p class="text-gray-600">Where sports and dining unite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 md:py-32 px-8 md:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Why Choose Blueskies HQ?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Discover the exceptional features that make us the premier destination for sports, dining, and unforgettable moments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: Live Sports -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Live Sports</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Experience every thrilling moment of your favorite games on our state-of-the-art display screens. From football and basketball to soccer and beyond, we bring the action directly to your table with crystal-clear HD quality and immersive sound systems.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Multiple HD Screens
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Premium Sound System
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> All Major Events
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Premium Dining -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Dining</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Indulge in culinary excellence crafted by our award-winning chefs. Our diverse menu features gourmet burgers, fresh seafood, tender steaks, and innovative vegetarian options. Every dish is prepared with the finest ingredients and served with meticulous attention to detail.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Award-Winning Chefs
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Premium Ingredients
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Diverse Menu Options
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Vibrant Atmosphere -->
+                <div class="card-hover bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m0 0l-2-1m2 1v2.5M14 4l-2 1m0 0L10 4m2 1v2.5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Vibrant Atmosphere</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Feel the electric energy that fills every corner of Blueskies HQ. Our carefully designed space combines modern elegance with comfortable seating, ambient lighting, and an infectious energy that brings people together. Whether celebrating victories or enjoying great company, our atmosphere is unmatched.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Modern Design
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Comfortable Seating
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700">
+                            <span class="text-[#00E5A8] font-bold">✓</span> Electric Energy
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 md:py-32 px-8 md:px-16 gradient-soft-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Experience the Blueskies Difference
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Discover how our unique blend of entertainment, cuisine, and ambiance transforms every visit into a memorable experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+                <!-- Benefit 1: Watch Games -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-white shadow-md">
+                            <svg class="w-8 h-8 text-[#5B4BFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Watch Games</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Never miss a moment of the action. Our advanced streaming technology and multiple HD displays ensure you catch every play, every goal, and every incredible moment. From championship games to thrilling playoffs, experience sports the way they're meant to be seen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Eat Great -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-white shadow-md">
+                            <svg class="w-8 h-8 text-[#5B4BFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Eat Great</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Savor exceptional flavors prepared by our culinary experts. From classic favorites to innovative creations, every dish is a celebration of taste and quality. Pair your meal with our carefully curated selection of beverages for the perfect dining experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Feel Alive -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-white shadow-md">
+                            <svg class="w-8 h-8 text-[#5B4BFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Feel Alive</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Connect with a community of passionate sports fans and food enthusiasts. The energy at Blueskies HQ is contagious. Whether celebrating your team's victory or simply enjoying great company, you'll feel the pulse of excitement that makes every visit unforgettable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4: Community Connection -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-white shadow-md">
+                            <svg class="w-8 h-8 text-[#5B4BFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3.6a1.6 1.6 0 01-1.6-1.6V5.6A1.6 1.6 0 013.6 4h10.8a1.6 1.6 0 011.6 1.6v12.8a1.6 1.6 0 01-1.6 1.6zm6-6a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Community Connection</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Become part of the Blueskies HQ family. We host special events, tournaments, and gatherings that bring our community together. Make lasting memories with friends, family, and fellow fans in an environment where everyone feels welcome and valued.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-32 px-8 md:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    What Our Guests Say
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Discover why thousands of satisfied customers choose Blueskies HQ as their ultimate destination for sports, dining, and unforgettable moments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gradient-soft-bg rounded-2xl p-8 border border-gray-200">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "Blueskies HQ has become my go-to spot for watching the big games. The HD screens are incredible, the food is outstanding, and the atmosphere is electric. I've never felt more connected to the game and the community!"
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">Marcus Thompson</p>
+                        <p class="text-sm text-gray-600">Sports Enthusiast</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gradient-soft-bg rounded-2xl p-8 border border-gray-200">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "The food here is absolutely phenomenal. I brought my family for dinner last weekend, and everyone raved about their meals. The service was attentive, and we felt truly welcomed. It's the perfect place for a special evening!"
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">Sarah Mitchell</p>
+                        <p class="text-sm text-gray-600">Restaurant Reviewer</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gradient-soft-bg rounded-2xl p-8 border border-gray-200">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "I've been coming to Blueskies HQ for three years now, and it just keeps getting better! The staff remembers my name, the food is consistently excellent, and the energy during playoff season is absolutely unbeatable. Highly recommended!"
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">James Rodriguez</p>
+                        <p class="text-sm text-gray-600">Regular Customer & Community Member</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-gradient-soft-bg rounded-2xl p-8 border border-gray-200">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-[#00E5A8]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "Perfect venue for corporate events and celebrations! We hosted our company team-building event here, and everyone had an amazing time. The facilities are top-notch, and the team was incredibly accommodating with our special requests."
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">Emily Chen</p>
+                        <p class="text-sm text-gray-600">Event Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 gradient-soft-bg">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    About Blueskies HQ
+                </h2>
+            </div>
+
+            <div class="space-y-8">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Blueskies HQ was founded with a singular vision: to create the ultimate destination where sports passion meets culinary excellence. Our journey began when our founders, lifelong sports enthusiasts and food lovers, realized there was a gap in the market for a venue that truly celebrated both passions equally. Since our opening in 2015, we've grown from a modest neighborhood spot into the premier sportsbar and restaurant that ST Mary now knows and loves. We've invested heavily in state-of-the-art technology, world-class dining facilities, and an atmosphere that captures the electric energy of live sports while maintaining the comfort and elegance of fine dining.
+                </p>
+
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At Blueskies HQ, we believe in the power of community and shared experiences. Our core values are rooted in excellence, authenticity, and hospitality. We're committed to sourcing the finest ingredients, training our team to deliver exceptional service, and fostering an inclusive environment where every guest feels valued. Whether you're a die-hard sports fan, a culinary enthusiast, or simply someone looking for a vibrant place to gather with friends and family, Blueskies HQ is your home. We're not just serving food and broadcasting games—we're creating memories and building connections that last a lifetime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-32 px-8 md:px-16 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Find answers to common questions about Blueskies HQ
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gradient-soft-bg transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">
+                            What sports events do you broadcast?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-[#5B4BFF] flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            We broadcast all major sporting events including NFL, NBA, MLB, NHL, college football, college basketball, soccer, and international sporting events. Our multiple HD screens ensure you can watch several games simultaneously, and our advanced streaming technology means we rarely miss any significant event. We also host special viewing parties for championship games, playoffs, and major tournaments. If there's a specific event you'd like to watch, feel free to contact us in advance!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gradient-soft-bg transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">
+                            Do you accommodate large groups and private events?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-[#5B4BFF] flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Absolutely! We specialize in hosting private events, corporate gatherings, birthday celebrations, and group outings. Our flexible space can accommodate groups ranging from 20 to 200+ guests. We offer customized menu options, dedicated event staff, and can arrange private viewing areas for your event. Whether you're planning a corporate team-building event, a birthday celebration, or a watch party for your favorite team, our experienced event coordinators will work with you to create an unforgettable experience. Please contact us at info.blusky@gmail.com to discuss your event details and receive a personalized quote.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gradient-soft-bg transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">
+                            What are your operating hours and reservation policies?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-[#5B4BFF] flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            We're open seven days a week to serve our community. While walk-ins are always welcome, we highly recommend making a reservation, especially during peak hours and major sporting events. Reservations can be made online through our website or by calling us directly. We offer flexible seating arrangements and can accommodate most requests with advance notice. During major championship games and playoff events, we may have limited seating availability, so early reservations are strongly encouraged. For the most current information about our hours and any special event scheduling, please reach out to us at info.blusky@gmail.com.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gradient-soft-bg transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">
+                            Do you offer catering services or take-out options?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-[#5B4BFF] flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Yes! We offer both catering services and convenient take-out options. Our catering menu is extensive and can be customized to fit any occasion, from intimate gatherings to large corporate events. All items are prepared fresh by our award-winning culinary team using premium ingredients. For take-out orders, you can place them online, by phone, or in person. We also offer delivery services for orders within our service area. Whether you want to enjoy our food at home while watching the game or need catering for your next event, we've got you covered. Contact us for more details on pricing and menu options.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gradient-soft-bg transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">
+                            What dietary accommodations and special menu options are available?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-[#5B4BFF] flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            We're committed to accommodating all dietary preferences and restrictions. Our menu includes vegetarian, vegan, gluten-free, and keto-friendly options. We also cater to allergies and can prepare custom dishes based on your specific dietary needs. Our kitchen staff is well-trained in food safety and cross-contamination prevention. We maintain detailed ingredient lists for all our dishes, and our team is always happy to discuss preparation methods and ingredient sourcing. If you have specific dietary requirements, please inform your server when ordering, and we'll ensure your meal is prepared to your specifications. We believe everyone should be able to enjoy exceptional food at Blueskies HQ!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 md:py-32 px-8 md:px-16 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&h=600&fit=crop'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Ready to Experience Blueskies HQ?
+            </h2>
+            <p class="text-xl text-gray-100 mb-8 leading-relaxed">
+                Join thousands of satisfied guests who have made Blueskies HQ their favorite destination for sports, dining, and unforgettable moments. Whether you're planning a casual evening with friends or a special celebration, we're here to create an experience you'll never forget.
+            </p>
+            <a href="https://gmail.com" class="btn-primary rounded-full px-10 py-4 font-semibold text-lg inline-block hover:shadow-2xl">
+                Get in Touch Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- About Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full gradient-primary flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">B</span>
+                        </div>
+                        <span class="text-xl font-bold text-white">Blueskies HQ</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        ST Mary's Premier Sportsbar & Restaurant. Where sports passion meets culinary excellence.
+                    </p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">Our Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+                    <div class="space-y-3">
+                        <p class="text-gray-400">
+                            <span class="block text-sm font-semibold text-gray-300 mb-1">Email</span>
+                            <a href="mailto:info.blusky@gmail.com" class="hover:text-[#00E5A8] transition-colors duration-300">info.blusky@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Blueskies HQ. All rights reserved.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300" aria-label="YouTube">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
